@@ -10,6 +10,7 @@ class User(connector.Manager.Base):
     password = Column(String(12))
     username = Column(String(12))
 
+
 class Message(connector.Manager.Base):
     __tablename__ = 'messages'
     id = Column(Integer, Sequence('message_id_seq'), primary_key=True)
@@ -19,3 +20,5 @@ class Message(connector.Manager.Base):
     user_to_id = Column(Integer, ForeignKey('users.id'))
     user_from = relationship(User, foreign_keys=[user_from_id])
     user_to = relationship(User, foreign_keys=[user_to_id])
+
+
