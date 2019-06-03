@@ -22,6 +22,13 @@ def login():
 def reindex():
     return render_template('index.html')
 
+@app.route('/static/forgot-password.html')
+def forgot_password():
+    return render_template('forgot-password.html')
+
+@app.route('/static/register.html')
+def register():
+    return render_template('register.html')
 
 @app.route('/static/<content>',methods=['POST'])
 def static_content(content):
