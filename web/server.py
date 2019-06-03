@@ -30,7 +30,7 @@ def forgot_password():
 def register():
     return render_template('register.html')
 
-@app.route('/static/<content>',methods=['POST'])
+@app.route('/static/<content>',methods=['GET','POST','PUT','DELETE'])
 def static_content(content):
     return render_template(content)
 
@@ -61,10 +61,10 @@ def authenticate():
 def create_user():
     c =  json.loads(request.form['values'])
     user = entities.User(
-        username=c['username'],
+        lastname=c['lastname'],
         name=c['name'],
-        fullname=c['fullname'],
-        password=c['password']
+        password=c['password'],
+        email=c['email']
     )
     session = db.getSession(engine)
     session.add(user)
@@ -78,7 +78,6 @@ def get_user(id):
     for user in users:
         js = json.dumps(user, cls=connector.AlchemyEncoder)
         return  Response(js, status=200, mimetype='application/json')
-
     message = { 'status': 404, 'message': 'Not Found'}
     return Response(message, status=404, mimetype='application/json')
 
@@ -87,10 +86,10 @@ def get_user(id):
 def get_users():
     session = db.getSession(engine)
     dbResponse = session.query(entities.User)
-    list = []
+    data = []
     for user in dbResponse:
-        list.append(user)
-    return Response(json.dumps(list, cls=connector.AlchemyEncoder), mimetype='application/json')
+        data.append(user)
+    return Response(json.dumps(data, cls=connector.AlchemyEncoder), mimetype='application/json')
 
 @app.route('/users', methods = ['PUT'])
 def update_password():

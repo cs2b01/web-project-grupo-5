@@ -34,13 +34,13 @@ $(function(){
             dataType: "number",
             allowEditing: false
         }, {
-            dataField: "username"
-        }, {
             dataField: "name"
         }, {
             dataField: "lastname"
         }, {
             dataField: "password"
+        }, {
+            dataField: "email"
         }, ],
     }).dxDataGrid("instance");
 });
