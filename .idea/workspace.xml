@@ -10,23 +10,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="16051b00-6d4f-42dd-a100-f5cc678983a2" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/addons/intro-music.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/addons/music-forgot.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/addons/music-register.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/static/css/sb-admin-2.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/static/css/sb-admin-2.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/static/images/fondo.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/static/images/img-forgot.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/static/images/img-login.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/static/images/img-register.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/static/images/undraw_posting_photo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/static/js/sb-admin-2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/static/js/sb-admin-2.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/forgot-password.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/register.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/layered.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/layered.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -83,8 +66,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/templates/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="82" column="24" selection-start-line="82" selection-start-column="24" selection-end-line="82" selection-end-column="24" />
+            <state relative-caret-position="323">
+              <caret line="85" column="29" selection-start-line="85" selection-start-column="29" selection-end-line="85" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -192,6 +175,21 @@
               <item name="web-project-grupo-5" type="b2602c69:ProjectViewProjectNode" />
               <item name="web-project-grupo-5" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="web-project-grupo-5" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web-project-grupo-5" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="fontawesome-free" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="web-project-grupo-5" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web-project-grupo-5" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -277,11 +275,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1974000" />
+    <option name="totallyTimeSpent" value="2317000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.31556502" />
@@ -374,8 +371,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/templates/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="82" column="24" selection-start-line="82" selection-start-column="24" selection-end-line="82" selection-end-column="24" />
+        <state relative-caret-position="323">
+          <caret line="85" column="29" selection-start-line="85" selection-start-column="29" selection-end-line="85" selection-end-column="29" />
         </state>
       </provider>
     </entry>
