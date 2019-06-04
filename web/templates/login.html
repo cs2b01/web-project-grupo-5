@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Copa America - Login</title>
+    <title>copaamerica.com</title>
 
   <!-- Custom fonts for this template-->
   <link href="/static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -40,10 +40,10 @@
                   </div>
                   <form class="user">
                     <div class="form-group">
-                      <input type="email" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Ingresa tu correo electrónico...">
+                      <input type="email" class="form-control form-control-user" id="email" aria-describedby="emailHelp" placeholder="Ingresa tu correo electrónico...">
                     </div>
                     <div class="form-group">
-                      <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Contraseña">
+                      <input type="password" class="form-control form-control-user" id="password" placeholder="Contraseña">
                     </div>
                     <div class="form-group">
                       <div class="custom-control custom-checkbox small">
@@ -51,8 +51,9 @@
                         <label class="custom-control-label" for="customCheck">Recordarme</label>
                       </div>
                     </div>
-                      <tr class="btn btn-primary btn-user btn-block"><input type="button" value="Login" onclick="getdata()">
-                      </tr>
+                      <div><input class="btn btn-primary btn-user btn-block" type="button" value="Login" onclick="getdata()">
+                      </div>
+                    <div class="text-center" id="action">Waiting for user </div>
                     <hr>
               <div class="text-center">
                 <a class="btn btn-primary btn-user btn-block" href="/static/forgot-password.html">¿Olvidaste tu contraseña?</a>

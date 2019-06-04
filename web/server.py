@@ -34,26 +34,6 @@ def register():
 def static_content(content):
     return render_template(content)
 
-@app.route('/authenticate', methods = ['POST'])
-def authenticate():
-    #1 Get data from requesr
-    message = json.loads(request.data)
-    email = message['email']
-    password = message['password']
-
-    #2 look in database
-    db_session = db.getSession(engine)
-    try:
-        user = db_session.query(entities.User
-            ).filter(entities.User.email == email
-            ).filter(entities.User.password == password
-            ).one()
-        message = {'message': 'Authorized'}
-        return Response(message, status=200, mimetype='application/json')
-    except Exception:
-        message = {'message': 'Unauthorized'}
-        return Response(message, status=401, mimetype='application/json')
-
 #Users
 
 @app.route('/users', methods = ['POST'])
@@ -108,6 +88,27 @@ def delete_user():
     session.commit()
     return "Deleted User"
 
+#Auntenticate
+@app.route('/authenticate', methods = ['POST'])
+def authenticate():
+
+    # 1 Get data from requesr
+    message = json.loads(request.data)
+    email = message['email']
+    password = message['password']
+
+    # 2 look in database
+    db_session = db.getSession(engine)
+    try:
+        user = db_session.query(entities.User
+                                ).filter(entities.User.email == email
+                                         ).filter(entities.User.password == password
+                                                  ).one()
+        message = {'message': 'Entra pe Mascota'}
+        return Response(message, status=200, mimetype='application/json')
+    except Exception:
+        message = {'message': 'Unauthorized'}
+        return Response(message, status=401, mimetype='application/json')
 if __name__ == '__main__':
     app.secret_key = ".."
     app.run(port=8080, threaded=True, host=('127.0.0.1'))
