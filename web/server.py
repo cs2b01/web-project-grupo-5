@@ -36,7 +36,6 @@ def static_content(content):
 
 @app.route('/authenticate', methods = ['POST'])
 def authenticate():
-    time.sleep(4)
     #1 Get data from requesr
     message = json.loads(request.data)
     email = message['email']
@@ -61,10 +60,10 @@ def authenticate():
 def create_user():
     c =  json.loads(request.form['values'])
     user = entities.User(
-        lastname=c['lastname'],
+        email=c['email'],
         name=c['name'],
-        password=c['password'],
-        email=c['email']
+        lastname=c['lastname'],
+        password=c['password']
     )
     session = db.getSession(engine)
     session.add(user)
@@ -78,38 +77,34 @@ def get_user(id):
     for user in users:
         js = json.dumps(user, cls=connector.AlchemyEncoder)
         return  Response(js, status=200, mimetype='application/json')
-    message = { 'status': 404, 'message': 'Not Found'}
+    message = {'status': 404, 'message': 'Not Found'}
     return Response(message, status=404, mimetype='application/json')
-
 
 @app.route('/users', methods = ['GET'])
 def get_users():
     session = db.getSession(engine)
     dbResponse = session.query(entities.User)
-    data = []
-    for user in dbResponse:
-        data.append(user)
+    data = dbResponse[:]
     return Response(json.dumps(data, cls=connector.AlchemyEncoder), mimetype='application/json')
 
 @app.route('/users', methods = ['PUT'])
-def update_password():
+def update_user():
     session = db.getSession(engine)
     id = request.form['key']
     user = session.query(entities.User).filter(entities.User.id == id).first()
-    c =  json.loads(request.form['values'])
+    c = json.loads(request.form['values'])
     for key in c.keys():
         setattr(user, key, c[key])
     session.add(user)
     session.commit()
     return 'Updated User'
 
-
 @app.route('/users', methods = ['DELETE'])
 def delete_user():
     id = request.form['key']
     session = db.getSession(engine)
-    users = session.query(entities.User).filter(entities.User.id == id).one()
-    session.delete(users)
+    user = session.query(entities.User).filter(entities.User.id == id).one()
+    session.delete(user)
     session.commit()
     return "Deleted User"
 
