@@ -88,10 +88,15 @@ def delete_user():
     session.commit()
     return "Deleted User"
 
+
+#Register
+
+
+
 #Auntenticate
 @app.route('/authenticate', methods = ['POST'])
 def authenticate():
-
+    time.sleep(3)
     # 1 Get data from requesr
     message = json.loads(request.data)
     email = message['email']
@@ -104,7 +109,7 @@ def authenticate():
                                 ).filter(entities.User.email == email
                                          ).filter(entities.User.password == password
                                                   ).one()
-        message = {'message': 'Entra pe Mascota'}
+        message = {'message': 'Authorized'}
         return Response(message, status=200, mimetype='application/json')
     except Exception:
         message = {'message': 'Unauthorized'}

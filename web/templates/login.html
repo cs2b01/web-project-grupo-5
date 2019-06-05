@@ -17,7 +17,7 @@
 
   <!-- Custom styles for this template-->
   <link href="/static/css/sb-admin-2.min.css" rel="stylesheet">
-
+  <script src="login.js"></script>
 </head>
 
 <body background="/static/images/fondo.jpg">
@@ -53,7 +53,8 @@
                     </div>
                       <div><input class="btn btn-primary btn-user btn-block" type="button" value="Login" onclick="getdata()">
                       </div>
-                    <div class="text-center" id="action">Waiting for user </div>
+                      <div class="text-center" id="action">
+                      <!--<img src="/static/images/loading.gif" width="20" height="20"/>--></div>
                     <hr>
               <div class="text-center">
                 <a class="btn btn-primary btn-user btn-block" href="/static/forgot-password.html">¿Olvidaste tu contraseña?</a>
@@ -84,33 +85,7 @@
   <!-- Custom scripts for all pages-->
   <script src="/static/js/sb-admin-2.min.js"></script>
 
-<script>
-    function getdata() {
-        $('#action').html("Aunthenticating....");
-        var email = $('#email').val();
-        var password = $('#password').val();
-        var message = JSON.stringify({
-            "email": email,
-            "password": password
-        });
-        $.ajax({
-            url: '/authenticate',
-            type: 'POST',
-            contentType: 'application/json',
-            data: message,
-            dataType: 'json',
-            success: function (response) {
-                //alert(JSON.stringify(response));
-                $('#action').html(response['statusText']);
-            },
-            error: function (response) {
-                //alert(JSON.stringify(response))
-                $('#action').html(response['statusText']);
 
-            }
-        });
-    }
-</script>
 </body>
 
 </html>
