@@ -39,8 +39,7 @@ function getdata(){
                 if(response['status']==401){
                     $('#action').append('<div class="text-center"><img src="/static/images/error.png"width="20" height="20"/>Ingrese bien sus datos</div>');}
                 else{
-                $('#action').append('<div href="/static/presentacion.html" class="text-center"><img src="/static/images/check.png"width="20" height="20"/>Logueado Correctamente<a href="/static/presentacion.html"></a></div>')
-                $('#action').
+                $('#action').append('<div class="text-center"><img src="/static/images/check.png"width="20" height="20"/>Logueado Correctamente</div>')
                 }
                 //$
             },
@@ -50,7 +49,7 @@ function getdata(){
                 if(response['status']==401){
                     $('#action').append('<div class="text-center"><img src="/static/images/error.png"width="20" height="20"/>Ingrese bien sus datos</div>');}
                 else{
-                $('#action').append('<div href="/static/presentacion.html" class="text-center"><img src="/static/images/check.png"width="20" height="20"/>Logueado Correctamente<a href="/static/presentacion.html"></a></div>')
+                $('#action').append('<div class="text-center"><img src="/static/images/check.png"width="20" height="20"/>Logueado Correctamente</div>')
                 }
             }
         });

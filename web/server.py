@@ -88,20 +88,17 @@ def delete_user():
     session.commit()
     return "Deleted User"
 
-
 #Register
-
 
 
 #Auntenticate
 @app.route('/authenticate', methods = ['POST'])
 def authenticate():
-    time.sleep(3)
+    time.sleep(1)
     # 1 Get data from requesr
     message = json.loads(request.data)
     email = message['email']
     password = message['password']
-
     # 2 look in database
     db_session = db.getSession(engine)
     try:
@@ -114,6 +111,7 @@ def authenticate():
     except Exception:
         message = {'message': 'Unauthorized'}
         return Response(message, status=401, mimetype='application/json')
+
 if __name__ == '__main__':
     app.secret_key = ".."
     app.run(port=8080, threaded=True, host=('127.0.0.1'))
