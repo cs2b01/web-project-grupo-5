@@ -108,9 +108,11 @@ def authenticate():
                                                   ).one()
         message = {'message': 'Authorized'}
         return Response(message, status=200, mimetype='application/json')
+
     except Exception:
         message = {'message': 'Unauthorized'}
         return Response(message, status=401, mimetype='application/json')
+
 
 if __name__ == '__main__':
     app.secret_key = ".."

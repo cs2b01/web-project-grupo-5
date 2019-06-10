@@ -40,7 +40,10 @@ function getdata(){
                     $('#action').append('<div class="text-center"><img src="/static/images/error.png"width="20" height="20"/>Ingrese bien sus datos</div>');}
                 else{
                 $('#action').append('<div class="text-center"><img src="/static/images/check.png"width="20" height="20"/>Logueado Correctamente</div>')
+                var url = 'http://' + document.domain + ':' + location.port + '/static/index.html?email=' + email;
+                 $(location).attr('href',url);
                 }
+
                 //$
             },
             error: function(response){
@@ -50,6 +53,8 @@ function getdata(){
                     $('#action').append('<div class="text-center"><img src="/static/images/error.png"width="20" height="20"/>Ingrese bien sus datos</div>');}
                 else{
                 $('#action').append('<div class="text-center"><img src="/static/images/check.png"width="20" height="20"/>Logueado Correctamente</div>')
+                var url = 'http://' + document.domain + ':' + location.port + '/static/index.html?username=' + email;
+                 $(location).attr('href',url);
                 }
             }
         });
