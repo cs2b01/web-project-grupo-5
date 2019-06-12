@@ -113,6 +113,25 @@ def authenticate():
         message = {'message': 'Unauthorized'}
         return Response(message, status=401, mimetype='application/json')
 
+@app.route('/registering', methods=['POST'])
+def registering():
+    c = json.loads(request.form['values'])
+    user = entities.User(
+        email=c['email'],
+        name=c['name'],
+        lastname=c['lastname'],
+        password=c['password']
+    )
+    try:
+        user = db_session.query(entities.User
+                                   ).filter(entities.User.email==email
+                                            ).filter(entities.User.password==password
+                                                     )
+    #session = db.getSession(engine)
+    #session.add(user)
+    #session.commit()
+    return 'Created User'
+
 
 if __name__ == '__main__':
     app.secret_key = ".."
