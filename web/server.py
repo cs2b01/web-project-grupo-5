@@ -115,10 +115,12 @@ def authenticate():
 
 @app.route('/registering', methods=['POST'])
 def registering():
+    time.sleep(1)
     message = json.loads(request.data)
     password=message['password']
     confirmedpassword= message['confirmedpassword']
     session = db.getSession(engine)
+
     if password!=confirmedpassword:
         message = {'message': 'Unauthorized'}
         return Response(message, status=401, mimetype='application/json')
@@ -132,7 +134,9 @@ def registering():
         session.add(user)
         session.commit()
         message={'message':'Authorized'}
+        time.sleep(1)
         return Response(message, status= 200, mimetype='application/json')
+
 
 
 if __name__ == '__main__':

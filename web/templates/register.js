@@ -1,5 +1,5 @@
 function Register(){
-        $('#action').append('<div class="text-center">Autenticando. . .<img src="/static/images/loading.gif"width="20" height="20"/></div>');
+        $('#action').append('<div class="text-center">Comprobando. . .<img src="/static/images/loading.gif"width="20" height="20"/></div>');
         var email = $('#email').val();
         var password = $('#password').val();
         var confirmedpassword = $('#confirmedpassword').val();
@@ -22,10 +22,10 @@ function Register(){
                 //alert(JSON.stringify(response));
                 $('#action').html("");
                 if(response['status']==401){
-                    $('#action').append('<div class="text-center"><img src="/static/images/error.png"width="20" height="20"/>La contraseña y la contraseña confirmada son distintas</div>');}
+                    $('#action').append('<div class="text-center"><img src="/static/images/error.png"width="20" height="20"/>Datos ingresados incorrectamente</div>');}
                 else{
                 $('#action').append('<div class="text-center"><img src="/static/images/check.png"width="20" height="20"/>Datos ingresados, pasa a loguearte en tu nueva cuenta</div>')
-                var url = 'http://' + document.domain + ':' + location.port + '/static/login.html?email=' + email;
+                var url = 'http://' + document.domain + ':' + location.port + '/static/login.html';
                  $(location).attr('href',url);
                 }
 
@@ -35,10 +35,10 @@ function Register(){
                 //alert(JSON.stringify(response));
                 $('#action').html("");
                 if(response['status']==401){
-                    $('#action').append('<div class="text-center"><img src="/static/images/error.png"width="20" height="20"/>La contraseña y la contraseña confirmada son distintas</div>');}
+                    $('#action').append('<div class="text-center"><img src="/static/images/error.png"width="20" height="20"/>Datos ingresados incorrectamente</div>');}
                 else{
                 $('#action').append('<div class="text-center"><img src="/static/images/check.png"width="20" height="20"/>Datos ingresados correctamente, pasa a loguearte en tu nueva cuenta</div>')
-                var url = 'http://' + document.domain + ':' + location.port + '/static/login.html?username=' + email;
+                var url = 'http://' + document.domain + ':' + location.port + '/static/login.html';
                  $(location).attr('href',url);
                 }
             }
