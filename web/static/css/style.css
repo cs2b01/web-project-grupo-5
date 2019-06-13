@@ -2,13 +2,13 @@
 /* :: 1.0 Import Fonts */
 @import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700");
 /* :: 2.0 Import All CSS */
-@import url(css/bootstrap.min.css);
-@import url(css/classy-nav.css);
-@import url(css/owl.carousel.min.css);
-@import url(css/animate.css);
-@import url(css/magnific-popup.css);
-@import url(css/font-awesome.min.css);
-@import url(css/nice-select.css);
+@import url(/static/css/bootstrap.min.css);
+@import url(/static/css/classy-nav.css);
+@import url(/static/css/owl.carousel.min.css);
+@import url(/static/css/animate.css);
+@import url(/static/css/magnific-popup.css);
+@import url(/static/css/font-awesome.min.css);
+@import url(/static/css/nice-select.css);
 /* :: 3.0 Base CSS */
 * {
   margin: 0;
@@ -17,7 +17,7 @@
 body {
   font-family: "Montserrat", sans-serif;
   font-size: 14px; 
-  background: url(img/bg-img/fondo.jpg);
+  background: url(/static/img/bg-img/fondo.jpg);
   background-attachment:fixed;
   background-repeat: no-repeat;	
   background-size: 100%;
