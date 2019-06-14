@@ -89,9 +89,6 @@ def delete_user():
     session.commit()
     return "Deleted User"
 
-#Register
-
-
 #Auntenticate
 @app.route('/authenticate', methods = ['POST'])
 def authenticate():
@@ -113,6 +110,12 @@ def authenticate():
     except Exception:
         message = {'message': 'Unauthorized'}
         return Response(message, status=401, mimetype='application/json')
+
+#Register
+
+@app.route('/logout')
+def logout():
+    render_template('login.html')
 
 @app.route('/registering', methods=['POST'])
 def registering():
