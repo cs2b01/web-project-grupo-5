@@ -59,3 +59,8 @@ function getdata(){
             }
         });
 }
+
+function logout() {
+    var url = 'http://' + document.domain + ':' + location.port + '/static/login.html';
+                 $(location).attr('href',url);
+}
