@@ -9,3 +9,10 @@ class User(connector.Manager.Base):
     lastname = Column(String(50))
     password = Column(String(12))
     email = Column(String(40))
+
+class Partidos(connector.Manager.Base):
+    __tablename__ = 'Partidos'
+    id = Column(Integer, Sequence('user_id_seq'), primary_key=True)
+    equipo = Column(String(20))
+    equipo_contrario = Column(String(20))
+    ganador = Column(String(20))
