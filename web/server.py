@@ -17,7 +17,6 @@ def index():
 def login():
     return render_template('login.html')
 
-
 @app.route('/static/index.html')
 def reindex():
     return render_template('index.html')
