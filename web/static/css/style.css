@@ -10,17 +10,18 @@
 @import url(/static/css/font-awesome.min.css);
 @import url(/static/css/nice-select.css);
 /* :: 3.0 Base CSS */
+
 * {
   margin: 0;
   padding: 0; }
 
 body {
   font-family: "Montserrat", sans-serif;
-  font-size: 14px; 
+  font-size: 14px;
   background: url(/static/img/bg-img/fondo.jpg);
   background-attachment:fixed;
-  background-repeat: no-repeat;	
-  background-size: 100%;
+  background-repeat: no-repeat;
+  background-size: 10%;
   }
 
 h1,
@@ -1602,6 +1603,7 @@ h3 {
     opacity: 0.6;
     text-decoration: none;
   }
+
 
 /* ====== The End ====== */
 
