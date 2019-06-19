@@ -14,22 +14,28 @@
 		<link type="text/css" rel="stylesheet" href="/static/css/nouislider.min.css"/>
 		<link type="text/css" rel="stylesheet" href="/static/css/style2.css"/>
 		<link rel="stylesheet" href="/static/css/font-awesome.min.css">
+		<script>
+			function buy(){
+				alert("¡Tú compra ha sido realizada con éxito!");
+			}
+		</script>
+		    <script src="login.js"></script>
 
     <!-- Favicon -->
 	</head>
 	<body>
 		<nav class="navbar navbar-expand-lg navbar-white bg-white fixed-top">
 		  <a class="navbar-brand" href="/static/index.html"><img src="/static/images/logo_index.png" width="30" height="30">Brasil 2019</a>
-		</div>
+
 			<div class="nav-item">
 				<a class="nav-link" href="/static/estadios.html"> Estadios </a>
 			</div>
 			<div class="nav-item">
-				<a class="nav-link" href="/static/compras.html"> Tienda </a>
+				<a class="nav-link" href="/static/equipos.html"> Equipos </a>
 			</div>
 			<div class="nav-item">
-				<a class="nav-link" onclick="logout()">Log Out</a>
-			</div>
+            <a class="nav-link" onclick="logout()">Log Out</a>
+        	</div>
 	  	</nav>
 		<hr>
 
@@ -82,7 +88,7 @@
 
 											</div>
 											<div class="add-to-cart">
-												<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i>Buy Now</button>
+												<input type="button" class="add-to-cart-btn" onclick="buy()" value="Buy Now"><i class="fa fa-shopping-cart"></i></input>
 											</div>
 										</div>
 										<!-- /product -->
@@ -110,7 +116,7 @@
 
 											</div>
 											<div class="add-to-cart">
-												<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i>Buy Now</button>
+												<input type="button" class="add-to-cart-btn" onclick="buy()" value="Buy Now"><i class="fa fa-shopping-cart"></i></input>
 											</div>
 										</div>
 										<!-- /product -->
@@ -137,7 +143,7 @@
 
 											</div>
 											<div class="add-to-cart">
-												<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i>Buy Now</button>
+												<input type="button" class="add-to-cart-btn" onclick="buy()" value="Buy Now"><i class="fa fa-shopping-cart"></i></input>
 											</div>
 										</div>
 										<!-- /product -->
@@ -164,7 +170,7 @@
 
 											</div>
 											<div class="add-to-cart">
-												<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i>Buy Now</button>
+												<input type="button" class="add-to-cart-btn" onclick="buy()" value="Buy Now"><i class="fa fa-shopping-cart"></i></input>
 											</div>
 										</div>
 										<!-- /product -->
@@ -191,7 +197,7 @@
 
 											</div>
 											<div class="add-to-cart">
-												<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i>Buy Now</button>
+												<input type="button" class="add-to-cart-btn" onclick="buy()" value="Buy Now"><i class="fa fa-shopping-cart"></i></input>
 											</div>
 										</div>
 										<!-- /product -->
@@ -219,7 +225,7 @@
 
 											</div>
 											<div class="add-to-cart">
-												<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i>Buy Now</button>
+												<input type="button" class="add-to-cart-btn" onclick="buy()" value="Buy Now"><i class="fa fa-shopping-cart"></i></input>
 											</div>
 										</div>
 										<!-- /product -->
@@ -247,7 +253,7 @@
 
 											</div>
 											<div class="add-to-cart">
-												<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i>Buy Now</button>
+												<input type="button" class="add-to-cart-btn" onclick="buy()" value="Buy Now"><i class="fa fa-shopping-cart"></i></input>
 											</div>
 										</div>
 										<!-- /product -->
@@ -275,7 +281,7 @@
 
 											</div>
 											<div class="add-to-cart">
-												<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i>Buy Now</button>
+												<input type="button" class="add-to-cart-btn" onclick="buy()" value="Buy Now"><i class="fa fa-shopping-cart"></i></input>
 											</div>
 										</div>
 										<!-- /product -->
@@ -303,7 +309,7 @@
 
 											</div>
 											<div class="add-to-cart">
-												<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i>Buy Now</button>
+												<input type="button" class="add-to-cart-btn" onclick="buy()" value="Buy Now"><i class="fa fa-shopping-cart"></i></input>
 											</div>
 										</div>
 										<!-- /product -->
@@ -330,7 +336,7 @@
 
 											</div>
 											<div class="add-to-cart">
-												<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i>Buy Now</button>
+												<input type="button" class="add-to-cart-btn" onclick="buy()" value="Buy Now"><i class="fa fa-shopping-cart"></i></input>
 											</div>
 										</div>
 										<!-- /product -->
@@ -358,7 +364,7 @@
 
 											</div>
 											<div class="add-to-cart">
-												<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i>Buy Now</button>
+												<input type="button" class="add-to-cart-btn" onclick="buy()" value="Buy Now"><i class="fa fa-shopping-cart"></i></input>
 											</div>
 										</div>
 										<!-- /product -->
@@ -385,14 +391,13 @@
 
 											</div>
 											<div class="add-to-cart">
-												<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i>Buy Now</button>
+												<input type="button" class="add-to-cart-btn" onclick="buy()" value="Buy Now"><i class="fa fa-shopping-cart"></i></input>
 											</div>
 										</div>
 										<!-- /product -->
 
+									<div id="slick-naw-1" class="products-slick-nav"></div>
 									</div>
-									<div id="slick-nav-1" class="products-slick-nav"><img src="/static/img/"></div>
-								</div>
 								<!-- /tab -->
 							</div>
 						</div>
@@ -448,7 +453,7 @@
 
 											</div>
 											<div class="add-to-cart">
-												<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i>Buy Now</button>
+												<input type="button" class="add-to-cart-btn" onclick="buy()" value="Buy Now"><i class="fa fa-shopping-cart"></i></input>
 											</div>
 										</div>
 										<!-- /product -->
@@ -475,7 +480,7 @@
 
 											</div>
 											<div class="add-to-cart">
-												<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i>Buy Now</button>
+												<input type="button" class="add-to-cart-btn" onclick="buy()" value="Buy Now"><i class="fa fa-shopping-cart"></i></input>
 											</div>
 										</div>
 										<!-- /product -->
@@ -503,7 +508,7 @@
 
 											</div>
 											<div class="add-to-cart">
-												<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i>Buy Now</button>
+												<input type="button" class="add-to-cart-btn" onclick="buy()" value="Buy Now"><i class="fa fa-shopping-cart"></i></input>
 											</div>
 										</div>
 										<!-- /product -->
@@ -531,14 +536,13 @@
 
 											</div>
 											<div class="add-to-cart">
-												<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i>Buy Now</button>
+												<input type="button" class="add-to-cart-btn" onclick="buy()" value="Buy Now"><i class="fa fa-shopping-cart"></i></input>
 											</div>
 										</div>
 										<!-- /product -->
-
-
 									</div>
 									<div id="slick-nav-2" class="products-slick-nav"></div>
+
 								</div>
 								<!-- /tab -->
 							</div>
